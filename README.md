@@ -1,6 +1,8 @@
 # node-async-require-loader
 [![Build Status](https://travis-ci.org/jaydenlin/node-async-require-loader.svg?branch=master)](https://travis-ci.org/jaydenlin/node-async-require-loader)  
 
+Updated: This was forked and updated for Webpack 3.
+
 > Transparently `require()` remote contents (node moudles) in webpack !
 
 
