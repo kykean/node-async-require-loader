@@ -60,7 +60,12 @@ module.exports = function(content) {
     if (async) {
         //Do the aync fetch and return
         console.log("Remote Node Module Url:" + nodeModuleUrl);
-        var res = requestSync('GET', nodeModuleUrl);
+        try {
+          var res = requestSync('GET', nodeModuleUrl);
+        } catch(err) {
+          console.error('Error async load ' + nodeModuleUrl);
+          throw err;
+        }
         var rawContent = res.getBody('utf8');
         var source;
         if(typeof(query.useUnescape)!=="undefined" && query.useUnescape){
